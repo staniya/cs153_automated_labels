@@ -127,6 +127,9 @@ ui-tests/playwright-report
 # VSCode
 .vscode
 
+# remove pkl data
+representations_facenet512.pkl
+
 # remove all data files
 open_cv_figures/
 output_data/
