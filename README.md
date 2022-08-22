@@ -10,13 +10,14 @@ In this work, we employ several architectures for face detection to assist conte
 
 ## Research Paper:
 
-The research paper is included within this GitHub Repository titled: _Taniya_Shinn_Report_. Click [here](https://https://github.com/staniya/cs153_automated_labels/Taniya_Shinn_Report.pdf) to access the PDF.
+The research paper is included within this GitHub Repository titled: _Taniya_Shinn_Report_. Click [here](https://github.com/staniya/cs153_automated_labels/blob/main/Taniya_Shinn_Report.pdf) to access the PDF.
 
 ## Repository Structure
 
 ```
 .
 ├── face-detection.ipynb <- Primary File For Face Detection On Cinematic Eye-Tracking Data
+├── Taniya_Shinn_Report.pdf <- Research Paper
 ├── .gitignore
 ├── README.md
 ├── video-detector.py <- Face Detection Within Video Stream
@@ -36,7 +37,7 @@ To discuss our choice of parameters, the _scaleFactor_ controls the extent to wh
 
 The goal of this section is to outline the process in which we can fine-tune an FCHD model. As noted by Vora et al., deep architectures are powerful as they are capable of adapting to “generalized features” that have high applicability. The [FCHD Model](https://github.com/aditya-vora/FCHD-Fully-Convolutional-Head-Detector) employs a VGG16 model as its base model. The VGG16 is considered a powerful architecture as it has been proven to be able to classify 1000 images of 1000 different categories with 92.7\% accuracy. Due to its public availability and ease to apply to transfer learning, it is one of the most popular deep learning algorithms for image classification.
 
-The architecture of Vora et al.’s FCHD head detection model adds three new convolutional layers to the VGG16 model to allow for further hierarchical decomposition of the input. For the purposes of our experiment, given that we are employing the same FCHD model, we set identical hyperparameters to Vora et al. The pre-trained VGG16 model is trained using the ImageNet dataset, and the new layers are “initialized with random weights sampled from a standard normal distribution with $\mu=0$ and $\sigma=0.01$”. Other hyperparameters include a weight decay of $0.0005$, a learning rate for the training set to $0.001$, and an epoch count of $15$. Note that the whole training uses a PyTorch framework.
+The architecture of Vora et al.’s FCHD head detection model adds three new convolutional layers to the VGG16 model to allow for further hierarchical decomposition of the input. For the purposes of our experiment, given that we are employing the same FCHD model, we set identical hyperparameters to Vora et al. The pre-trained VGG16 model is trained using the ImageNet dataset, and the new layers are initialized with random weights sampled from a standard normal distribution with $\mu=0$ and $\sigma=0.01$. Other hyperparameters include a weight decay of $0.0005$, a learning rate for the training set to $0.001$, and an epoch count of $15$. Note that the whole training uses a PyTorch framework.
 
 Now, to discuss the reasons we chose to employ an FCHD model, Vora et al.’s model specializes in head detection for crowded scenes. Given that the Gaze Data contains scenes where multiple characters from a movie scene are conglomerated in one area, sophisticated deep learning frameworks that can detect faces under challenging conditions (such as high occlusion) was necessary.
 
@@ -46,4 +47,4 @@ The methodology for implementing DeepFace is incredibly simple. Given that the f
 
 
 ## Results/ Discussions / Conclusion
-Please reference the [research paper](https://https://github.com/staniya/cs153_automated_labels/Taniya_Shinn_Report.pdf)
+Please reference the [research paper](https://github.com/staniya/cs153_automated_labels/blob/main/Taniya_Shinn_Report.pdf)
